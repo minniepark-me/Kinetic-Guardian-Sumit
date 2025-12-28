@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Kinetic Guardian | Project SUMIT-12</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --panel-bg: #161b22;
+            --accent-green: #00ff41;
+            --physics-blue: #58a6ff;
+            --text-main: #c9d1d9;
+            --warning-red: #ff3e3e;
+        }
+
+        /* DARK MODE TOGGLE STYLES */
+        body.light-mode {
+            --bg-color: #f0f2f5;
+            --panel-bg: #ffffff;
+            --text-main: #1c1e21;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Courier New', monospace;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: 0.3s;
+        }
+
+        /* TERMINAL GREETING */
+        #terminal-header {
+            background: #000;
+            width: 100%;
+            padding: 10px;
+            color: var(--accent-green);
+            font-size: 14px;
+            border-bottom: 1px solid var(--accent-green);
+        }
+
+        /* HEADER & PHOTO */
+        .header-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .profile-container {
+            position: relative;
+            border: 3px solid var(--physics-blue);
+            display: inline-block;
+            padding: 5px;
+            box-shadow: 0 0 20px rgba(88, 166, 255, 0.2);
+        }
+
+        .profile-pic {
+            width: 280px;
+            height: auto;
+            display: block;
+            filter: grayscale(100%);
+            transition: 0.5s;
+        }
+
+        .profile-pic:hover { filter: grayscale(0%); }
+
+        /* MEDICINE LABEL */
+        .medicine-label {
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            width: 320px;
+            border: 2px solid #000;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+            margin: 30px 0;
+            box-shadow: 8px 8px 0px var(--accent-green);
+        }
+
+        /* QUANTUM SECTION */
+        .quantum-box {
+            background: var(--panel-bg);
+            border-left: 5px solid var(--physics-blue);
+            padding: 20px;
+            width: 80%;
+            max-width: 500px;
+            margin-bottom: 20px;
+        }
+
+        /* BUTTONS */
+        .controls { display: flex; gap: 15px; margin-bottom: 40px; }
+        
+        button {
+            padding: 10px 15px;
+            cursor: pointer;
+            font-family: 'Courier New', monospace;
+            font-weight: bold;
+            background: transparent;
+            border: 1px solid var(--text-main);
+            color: var(--text-main);
+        }
+
+        .shield-btn { border-color: var(--physics-blue); color: var(--physics-blue); }
+        .shield-btn:hover { background: var(--physics-blue); color: #000; }
+        
+        .dark-toggle { border-color: var(--accent-green); color: var(--accent-green); }
+
+        /* AUDIO SECTION */
+        .audio-player {
+            margin-top: 20px;
+            font-size: 12px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="terminal-header">
+        <span id="typing-text"></span>
+    </div>
+
+    <div class="header-section">
+        <button class="dark-toggle" onclick="toggleDarkMode()">🌓 TOGGLE VISUAL SPECTRUM</button>
+        <br><br>
+        <div class="profile-container">
+            <img src="sumit-karate.jpg" alt="Sumit" class="profile-pic">
+            <div style="background: var(--physics-blue); color: #000; font-size: 12px; font-weight: bold;">IDENTITY: SUMIT [THE KINETIC GUARDIAN]</div>
+        </div>
+        <h1>SUMIT v12.0</h1>
+    </div>
+
+    <div class="medicine-label">
+        <div style="font-size: 28px; font-weight: bold; border-bottom: 4px solid black;">AMICITIA-12</div>
+        <p><strong>Compound:</strong> Sumit & Megha Bond</p>
+        <p><strong>Physics Logic:</strong> 100% Constant</p>
+        <p><strong>"Innocent Man" Purity:</strong> 0% (Heavy Contamination)</p>
+        <hr>
+        <p><strong>Dosage:</strong> 1-2 calls during period cycles or weekly for emotional stabilization.</p>
+        <div style="background: black; color: white; padding: 5px; font-size: 10px; margin-top: 10px; text-align: center;">
+            WARNING: MAY CAUSE HEAD TO BOIL. FUNERAL PLANNING RECOMMENDED.
+        </div>
+    </div>
+
+    <div class="quantum-box">
+        <h3>⚛️ QUANTUM ENTANGLEMENT</h3>
+        <p>Distance: <span style="color: var(--physics-blue);">1,000+ KM</span></p>
+        <p>Spirit Gap: <span style="color: var(--accent-green);">0.00000 KM</span></p>
+        <p>Status: <small>Stable for 12 Years / 4,380 Days</small></p>
+    </div>
+
+    <div class="controls">
+        <button class="shield-btn" onclick="activateShield()">🛡️ PROTECTOR MODE</button>
+        <button onclick="detectLies()" style="border-color: var(--warning-red); color: var(--warning-red);">🚫 DETECT LIES</button>
+    </div>
+
+    <div class="audio-player">
+        <p>Background Frequency: Physics Lo-Fi Beats</p>
+        <audio controls loop>
+            <source src="your-audio-file.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+  <style>
+    .research-paper {
+        background: #fdfdfd;
+        color: #333;
+        padding: 30px;
+        width: 85%;
+        max-width: 550px;
+        border: 1px solid #ddd;
+        font-family: 'Times New Roman', serif;
+        box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        margin-top: 20px;
+        line-height: 1.6;
+    }
+    .seal {
+        color: #800;
+        font-weight: bold;
+        border: 2px solid #800;
+        display: inline-block;
+        padding: 5px;
+        transform: rotate(-15deg);
+        float: right;
+    }
+</style>
+
+<div class="research-paper">
+    <div class="seal">VERIFIED 12YRS</div>
+    <h3 style="text-align: center; text-decoration: underline;">RESEARCH MEMORANDUM</h3>
+    <p><strong>Subject:</strong> The Sumit-Megha Theorem</p>
+    <p><strong>Observation Period:</strong> 2013 - 2025</p>
+    <p><strong>Result:</strong> 1,000 KM of distance has failed to decrease the signal strength. Our "Weekly Dose" of teasing is vital for system maintenance.</p>
+    <p><em>P.S. Stop claiming you are innocent. It's scientifically impossible.</em></p>
+</div>
+
+    <script>
+        // TERMINAL TYPING EFFECT
+        const text = "System.Initialize(Friendship)... Status: 12 Years Connected... Target: Sumit Identifed... Access Granted.";
+        let i = 0;
+        function typeWriter() {
+            if (i < text.length) {
+                document.getElementById("typing-text").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 50;
+            }
+        }
+        window.onload = typeWriter;
+
+        // DARK MODE TOGGLE
+        function toggleDarkMode() {
+            document.body.classList.toggle('light-mode');
+        }
+
+        // INTERACTIVE ALERTS
+        function activateShield() {
+            alert("🥋 KARATE MODE ACTIVATED\n\nSumit is now standing guard. All threats to Megha's peace are neutralized. Gentleman mode engaged.");
+        }
+
+        function detectLies() {
+            alert("⚠️ SYSTEM SCAN IN PROGRESS...\n\nAnalyzing claim: 'I am an innocent man.'\nResult: 100% DECEPTION DETECTED.\n\nRecommendation: Proceed with boiling head and funeral arrangements.");
+        }
+    </script>
+</body>
+</html>
