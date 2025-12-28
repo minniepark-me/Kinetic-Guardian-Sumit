@@ -127,9 +127,7 @@
         }
 
         .audio-player {
-            margin-top: 20px;
-            font-size: 12px;
-            opacity: 0.7;
+           display: none; /* This hides the player completely */
         }
 
         .research-paper {
@@ -268,6 +266,12 @@
             document.getElementById('bgMusic').play();
             alert("🚨 NEW DATA DETECTED: It is the Guardian's Birthday. Commencing Celebration...");
             window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+
+            // This trick starts the music on his first click anywhere on the site
+document.body.addEventListener('click', function() {
+    var audio = document.getElementById("bgMusic");
+    audio.play();
+}, { once: true });
         }
     </script>
 </body>
