@@ -48,11 +48,17 @@
 
         /* TERMINAL HEADER STYLING */
 #terminal-header {
-    background: rgba(0, 0, 0, 0.8); /* Dark background for the top bar */
+    background: #000000; /* Solid black to block out the dots behind it */
     width: 100%;
-    padding: 12px;
-    border-bottom: 2px solid #ff007f; /* Neon Pink Border */
-    font-weight: bold;
+    padding: 15px;
+    border-bottom: 3px solid #ff007f; /* Thicker Neon Pink Border */
+    
+    /* ADD THESE THREE LINES */
+    position: sticky; 
+    top: 0;
+    z-index: 1000; 
+    box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3); /* Adds a glow under the border */
+
 }
 
 /* THE GLOWING TEXT */
