@@ -46,14 +46,24 @@
 }
         }
 
-        /* TERMINAL GREETING */
-        #terminal-header {
-            background: #000;
-            width: 100%;
-            padding: 10px;
-            color: var(--accent-green);
-            font-size: 14px;
-            border-bottom: 1px solid var(--accent-green);
+        /* TERMINAL HEADER STYLING */
+#terminal-header {
+    background: rgba(0, 0, 0, 0.8); /* Dark background for the top bar */
+    width: 100%;
+    padding: 12px;
+    border-bottom: 2px solid #ff007f; /* Neon Pink Border */
+    font-weight: bold;
+}
+
+/* THE GLOWING TEXT */
+#typing-text {
+    color: #ff8c00; /* Neon Pink */
+    /* If you prefer Neon Orange, use #ff8c00 */
+    
+    text-shadow: 0 0 5px #ff007f, 0 0 10px #ff007f; /* This creates the neon glow */
+    letter-spacing: 2px;
+    font-size: 16px;
+}
         }
 
         /* HEADER & PHOTO */
