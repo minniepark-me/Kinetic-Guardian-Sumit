@@ -48,18 +48,14 @@
 
         /* TERMINAL HEADER STYLING */
 #terminal-header {
-    background: #000000; /* Solid black to block out the dots behind it */
+    background: #000000; /* Solid black to hide the dots */
     width: 100%;
     padding: 15px;
-    border-bottom: 3px solid #ff007f; /* Thicker Neon Pink Border */
-    
-    /* ADD THESE THREE LINES */
-    position: sticky; 
-    top: 0;
-    z-index: 1000; 
-    box-shadow: 0 4px 10px rgba(255, 0, 127, 0.3); /* Adds a glow under the border */
-
-}
+    border-bottom: 3px solid #ff007f; /* Neon Pink Border */
+    position: relative; /* Essential for z-index */
+    z-index: 9999; /* Put it on the very top layer */
+    box-shadow: 0 4px 15px rgba(255, 0, 127, 0.4); /* Neon glow effect */
+} 
 
 /* THE GLOWING TEXT */
 #typing-text {
@@ -135,6 +131,13 @@
         .shield-btn:hover { background: var(--physics-blue); color: #000; }
         
         .dark-toggle { border-color: var(--accent-green); color: var(--accent-green); }
+
+        /* This makes the Red button turn red when you hover over it */
+.teasing-btn:hover {
+    background-color: var(--warning-red); /* Fills the box with red */
+    color: #000000; /* Makes the text black so it's readable on red */
+    box-shadow: 0 0 15px var(--warning-red); /* Adds a red glow */
+}
 
         /* AUDIO SECTION */
         .audio-player {
