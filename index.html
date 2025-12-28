@@ -202,7 +202,7 @@
             if (i < text.length) {
                 document.getElementById("typing-text").innerHTML += text.charAt(i);
                 i++;
-                setTimeout(typeWriter, 50;
+                setTimeout(typeWriter, 50);
             }
         }
         window.onload = typeWriter;
@@ -221,5 +221,43 @@
             alert("⚠️ SYSTEM SCAN IN PROGRESS...\n\nAnalyzing claim: 'I am an innocent man.'\nResult: 100% DECEPTION DETECTED.\n\nRecommendation: Proceed with boiling head and funeral arrangements.");
         }
     </script>
+
+    <style>
+    .bday-section {
+        margin-top: 50px;
+        padding: 40px;
+        background: linear-gradient(45deg, #000, #1a1a1a);
+        border: 2px dashed #ffd700; /* Gold for his Bday */
+        text-align: center;
+        display: none; /* Hidden until button is clicked */
+    }
+    .bday-btn {
+        background: #ffd700;
+        color: #000;
+        padding: 15px 30px;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        margin-top: 20px;
+        box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+    }
+</style>
+
+<button class="bday-btn" onclick="openBday()">📂 INITIATE BIRTHDAY PROTOCOL 2025</button>
+
+<div id="bday" class="bday-section">
+    <h1 style="color: #ffd700;">HAPPY BIRTHDAY, SUMIT! 🎂</h1>
+    <p style="color: #fff; font-style: italic;">"May your Physics always be balanced and your Pharma always be potent."</p>
+    <div style="font-size: 50px;">🥋🧬💊</div>
+    <p>After 12 years of friendship, you aren't just a 'Subject' in my life—you are the most consistent variable in my universe. I hope this year brings you as much strength as your Karate and as much peace as your gentlemanly soul deserves.</p>
+</div>
+
+<script>
+    function openBday() {
+        document.getElementById('bday').style.display = 'block';
+        alert("🚨 NEW DATA DETECTED: It is the Guardian's Birthday. Commencing Celebration...");
+        window.scrollTo(0, document.body.scrollHeight);
+    }
+</script>
 </body>
 </html>
