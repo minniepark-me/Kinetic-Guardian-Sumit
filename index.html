@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kinetic Guardian | Project SUMIT-12</title>
+    <title>The Kinetic Guardian | Project SUMIT-25</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -21,15 +21,29 @@
             --text-main: #1c1e21;
         }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Courier New', monospace;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            transition: 0.3s;
+       body {
+    background-color: #000000; /* Pure Black Theme */
+    /* This creates the Polka Dot Pattern */
+    background-image: radial-gradient(#ff0000 15%, transparent 16%),
+                      radial-gradient(#ff0000 15%, transparent 16%);
+    background-size: 80px 80px; /* Controls the size of the dots */
+    background-position: 0 0, 40px 40px; /* Offsets them to look like dots */
+    
+    color: var(--text-main);
+    font-family: 'Courier New', monospace;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* We need to make the panels readable over the dots */
+.quantum-box, .research-paper, .profile-container {
+    background-color: rgba(13, 17, 23, 0.9); /* Slight transparency */
+    backdrop-filter: blur(5px); /* This makes it look very modern/pro */
+    border: 1px solid var(--physics-blue);
+}
         }
 
         /* TERMINAL GREETING */
@@ -127,7 +141,7 @@
             <img src="sumit-karate.jpg" alt="Sumit" class="profile-pic">
             <div style="background: var(--physics-blue); color: #000; font-size: 12px; font-weight: bold;">IDENTITY: SUMIT [THE KINETIC GUARDIAN]</div>
         </div>
-        <h1>SUMIT v12.0</h1>
+        <h1>SUMIT v25.0</h1>
     </div>
 
     <div class="medicine-label">
@@ -157,7 +171,7 @@
     <div class="audio-player">
         <p>Background Frequency: Physics Lo-Fi Beats</p>
         <audio controls loop>
-            <source src="your-audio-file.mp3" type="audio/mpeg">
+            <source src="bg-music.mp3" type="audio/mpeg">
         </audio>
     </div>
 
